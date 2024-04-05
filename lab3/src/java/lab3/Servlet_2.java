@@ -52,7 +52,7 @@ public class Servlet_2 extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/midsem", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ajp", "ajp", "ajp");
             Statement stm = con.createStatement();
             ResultSet rs = stm.executeQuery("Select * From user");
             ResultSetMetaData rsmd = (ResultSetMetaData) rs.getMetaData();

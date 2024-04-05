@@ -53,7 +53,7 @@ public class Servlet_1 extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/midsem", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ajp", "ajp", "ajp");
             Statement stm = con.createStatement();
             String query = "insert into user value('" + userName + "','" + birthDate + "','" + emailId + "','" + contactNo + "')";
             if (stm.executeUpdate(query) > 0) {
@@ -65,7 +65,7 @@ public class Servlet_1 extends HttpServlet {
             con.close();
         } catch (SQLException e) {
             // TODO: handle exception
-            out.println("<font color='#e00'>Errore:" + e.getMessage() + "</font>");
+            out.println("<font color='#e00'>Error:" + e.getMessage() + "</font>");
         }
     }
 }
