@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class lab3.Servlet_1
  */
-@WebServlet("/lab3/Servlet_1")
+@WebServlet("/Servlet_1")
 public class Servlet_1 extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
