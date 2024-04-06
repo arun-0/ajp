@@ -2,9 +2,9 @@ import java.sql.*;
 import java.util.Scanner;
 
 public class StudentInformationSystem {
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/midsem";
-    private static final String USER = "root";
-    private static final String PASS = "root";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/ajp";
+    private static final String USER = "ajp";
+    private static final String PASS = "ajp";
 
     public static void main(String[] args) {
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
@@ -58,14 +58,14 @@ public class StudentInformationSystem {
 
     private static void createTable(Connection conn) throws SQLException {
         String sql = "CREATE TABLE IF NOT EXISTS students ("
-                + "student_id INT PRIMARY KEY AUTO_INCREMENT,"
-                + "name VARCHAR(50),"
-                + "age INT,"
-                + "grade VARCHAR(10)"
-                + ")";
+                   + "studentId INT PRIMARY KEY AUTO_INCREMENT,"
+                   + "name VARCHAR(50),"
+                   + "age INT,"
+                   + "grade VARCHAR(10)"
+                   + ")";
         try (Statement stmt = conn.createStatement()) {
             stmt.executeUpdate(sql);
-            System.out.println("Table created successfully.");
+            System.out.println("Table created successfully, OR it already exists.");
         }
     }
 
@@ -106,14 +106,13 @@ public class StudentInformationSystem {
         int age = scanner.nextInt();
         scanner.nextLine(); // Consume newline character
         System.out.print("Grade: ");
-        float grade = scanner.nextFloat();
-        scanner.nextLine(); // Consume newline character
+        String grade = scanner.nextLine();
 
-        String sql = "UPDATE students SET name = ?, age = ?, grade = ? WHERE student_id = ?";
+        String sql = "UPDATE students SET name = ?, age = ?, grade = ? WHERE studentId = ?";
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, name);
             pstmt.setInt(2, age);
-            pstmt.setFloat(3, grade);
+            pstmt.setString(3, grade);
             pstmt.setInt(4, studentId);
             int rowsAffected = pstmt.executeUpdate();
             if (rowsAffected > 0) {
@@ -125,11 +124,12 @@ public class StudentInformationSystem {
     }
 
     private static void deleteStudent(Connection conn) throws SQLException {
-        System.out.print("Enter student ID to delete: ");
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter student ID to delete: ");
         int studentId = scanner.nextInt();
+        scanner.nextLine(); // Consume newline character
 
-        String sql = "DELETE FROM students WHERE student_id = ?";
+        String sql = "DELETE FROM students WHERE studentId = ?";
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setInt(1, studentId);
             int rowsAffected = pstmt.executeUpdate();

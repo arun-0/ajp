@@ -20,7 +20,7 @@ public class Servlet1 extends HttpServlet {
         p = request.getParameter("pwd").trim();
         Connection c;
         try {
-// PrintWriter out = response.getWriter();
+            // PrintWriter out = response.getWriter();
             /* TODO output your page here. You may use following sample code. */
             Class.forName("com.mysql.cj.jdbc.Driver");
             c = DriverManager.getConnection(
@@ -35,7 +35,7 @@ public class Servlet1 extends HttpServlet {
                 session.setAttribute("un", u);
                 response.sendRedirect("/lab7/home.jsp");
             } else {
-//session.setAttribute("flag", "Wrong Credentials");
+                //session.setAttribute("flag", "Wrong Credentials");
                 response.sendRedirect("/lab7/index.html");
             }
         } catch (Exception e) {
