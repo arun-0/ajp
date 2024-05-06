@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="lab12">
+    <output-path>$PROJECT_DIR$/out/artifacts/lab12</output-path>
+    <root id="archive" name="lab12.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="lab12" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lab12-lib" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="lab12/web/Web" />
+    </root>
+  </artifact>
+</component>
