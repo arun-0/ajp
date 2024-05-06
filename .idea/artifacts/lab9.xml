@@ -1,17 +1,16 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="lab8">
-    <output-path>$PROJECT_DIR$/out/artifacts/lab8</output-path>
-    <root id="archive" name="lab8.war">
+  <artifact type="war" name="lab9">
+    <output-path>$PROJECT_DIR$/out/artifacts/lab9</output-path>
+    <root id="archive" name="lab9.war">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="lab8" />
+          <element id="module-output" name="lab9" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="mysql-connector-j-8.2.0" />
-          <element id="library" level="project" name="jstl-1.2" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="lab8/web/Web" />
+      <element id="javaee-facet-resources" facet="lab9/web/Web" />
     </root>
   </artifact>
 </component>
