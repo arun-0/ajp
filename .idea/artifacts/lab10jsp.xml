@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="lab10jsp">
+    <output-path>$PROJECT_DIR$/out/artifacts/lab10jsp</output-path>
+    <root id="archive" name="lab10jsp.war">
+      <element id="javaee-facet-resources" facet="lab10jsp/web/Web" />
+    </root>
+  </artifact>
+</component>
