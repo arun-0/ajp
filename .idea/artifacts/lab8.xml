@@ -7,7 +7,7 @@
           <element id="module-output" name="lab8" />
         </element>
         <element id="directory" name="lib">
-          <element id="file-copy" path="$PROJECT_DIR$/lib/mysql-connector-j-8.2.0.jar" />
+          <element id="library" level="project" name="mysql-connector-j-8.2.0" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="lab8/web/Web" />
