@@ -1,0 +1,37 @@
+* Database info *
+__________________
+
+dbname-practical13
+username-root
+password-
+tablename-phonebook
+phonebook
+	-id(PK,AI)
+	-name(varchar)
+	-number(varchar)
+	
+	<% 
+	try
+	{
+		DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/practical12","root","");
+		Statement statement = connection.createStatement();
+		ResultSet rst = statement.executeQuery("select * from phonebook where id ="+request.getParameter("id"));
+		//rst.next();
+		%>
+		
+		<form method="post" action="rest/service/update">
+			<input type="hidden" name="id" value="<%=request.getParameter("id") %>">
+			Name <input type="text" name="name" value="<%=rst.getString(1)%>">
+			Number <input type="text" name="number" value="<%=rst.getString(3)%>">
+			<input type="submit" value="Update">
+		</form>
+		
+		<%
+	}catch(Exception e)
+	{
+		out.println(e.getMessage());
+	}
+	
+%>
+	
