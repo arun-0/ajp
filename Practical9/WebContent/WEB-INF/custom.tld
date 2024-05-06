@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>Example TLD</short-name>
+	<tag>
+		<name>sorting</name>
+		<tag-class>edu.keval.Tags</tag-class>
+		<attribute>
+		<name>numbers</name>
+		<required>true</required>
+		</attribute>
+		<body-content>empty</body-content>
+	</tag>
+</taglib>
