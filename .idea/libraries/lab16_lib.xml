@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="lab16-lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Practical16/WebContent/WEB-INF/lib/mysql-connector-j-8.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Practical16/WebContent/WEB-INF/lib/ognl-3.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Practical16/WebContent/WEB-INF/lib/struts2-core-2.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Practical16/WebContent/WEB-INF/lib/commons-lang-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Practical16/WebContent/WEB-INF/lib/freemarker-2.3.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Practical16/WebContent/WEB-INF/lib/commons-io-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Practical16/WebContent/WEB-INF/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Practical16/WebContent/WEB-INF/lib/ojdbc14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Practical16/WebContent/WEB-INF/lib/xwork-core-2.1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Practical16/WebContent/WEB-INF/lib/hibernate-core-4.3.11.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Practical16/WebContent/WEB-INF/lib/commons-fileupload-1.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
