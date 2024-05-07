@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<constant name="struts.devMode" value="true" />
+    <package name="myPack" extends="struts-default">
+        <interceptors>
+            <interceptor name="myIn" class="myPack.myIntercept"></interceptor>
+            <interceptor-stack name="loggingStack">
+                <interceptor-ref name="myIn" />
+<!--                <interceptor-ref name="myIn2" />-->
+<!--                <interceptor-ref name="myIn3" />-->
+                <interceptor-ref name="defaultStack" />
+            </interceptor-stack>
+        </interceptors>
+
+        <action name="upperAction1" class="myPack.upperAction">
+            <interceptor-ref name="loggingStack" />
+            <result name="success">welcome.jsp</result>
+            <result name="error">Error.jsp</result>
+        </action>
+        <action name="lowerAction1" class="myPack.lowerAction" method="execute">
+            <result name="success">welcome.jsp</result>
+        </action>
+   </package>
+</struts>
