@@ -1,0 +1,10 @@
+INSERT INTO ajp.accounts (id, name, balance) VALUES (1, 'Lalit', 250);
+INSERT INTO ajp.credit (id, username, password, data) VALUES (1, 'arun', 'password', 'abcd');
+INSERT INTO ajp.phonebook (id, name, number) VALUES (2, 'Lalit', 1234567890);
+INSERT INTO ajp.registration (name, pwd) VALUES ('dharmendra.parihar544@gmail.com', 'password1');
+INSERT INTO ajp.user (username, birthDate, emailId, contactNo) VALUES ('durgesh', '23/01/1998', 'arun.parihar@gm', '79797');
+INSERT INTO ajp.user (username, birthDate, emailId, contactNo) VALUES ('sampat', '23/01/1998', 'arun.parihar@gm', '0742973372');
+INSERT INTO ajp.user (username, birthDate, emailId, contactNo) VALUES ('chatur', '23/01/1998', 'arun.parihar@gm', '0742973372');
+INSERT INTO ajp.user (username, birthDate, emailId, contactNo) VALUES ('saket', '23/01/1998', 'arun.parihar@gm', '0742973372');
+INSERT INTO ajp.user (username, birthDate, emailId, contactNo) VALUES ('Arun1', '23/01/1998', 'arun.parihar@gm', '0742973372');
+INSERT INTO ajp.user (username, birthDate, emailId, contactNo) VALUES ('lalit', '23/01/1998', 'arun.parihar@gm', '0742973372');
