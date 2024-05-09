@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="lab14">
+    <output-path>$PROJECT_DIR$/out/artifacts/lab14</output-path>
+    <root id="archive" name="lab14.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Practical14" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/Practical14/lib/javax.inject-1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/Practical14/lib/hk2-api-2.4.0-b34.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/Practical14/lib/hk2-utils-2.4.0-b34.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/Practical14/lib/jersey-guava-2.22.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/Practical14/lib/jersey-client-2.22.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/Practical14/lib/jersey-common-2.22.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/Practical14/lib/hk2-locator-2.4.0-b34.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/Practical14/lib/javax.ws.rs-api-2.0.1.jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="Practical14/web/Web" />
+    </root>
+  </artifact>
+</component>
