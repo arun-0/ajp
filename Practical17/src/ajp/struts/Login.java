@@ -29,7 +29,7 @@ public class Login extends ActionSupport {
 		DriverManager.registerDriver(new com.mysql.jdbc.Driver());		
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ajp","ajp","ajp");
 		Statement stm = con.createStatement();
-		String qry = "select id from credit where username='"+username+"' AND password='"+password+"'";
+		String qry = "select id from user where username='"+username+"' AND password='"+password+"'";
 		ResultSet rs = stm.executeQuery(qry);
 		rs.next();
 		if (rs.getRow()>0) {

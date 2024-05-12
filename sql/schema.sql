@@ -10,6 +10,12 @@ FLUSH PRIVILEGES;
 -- DriverManager.registerDriver(new com.mysql.jdbc.Driver());
 -- Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ajp","ajp","ajp");
 
+drop table if exists accounts;
+drop table if exists credit;
+drop table if exists phonebook;
+drop table if exists registration;
+drop table if exists students;
+drop table if exists user;
 
 -- Table creation scripts
 create table accounts
@@ -50,10 +56,17 @@ create table students
     grade     varchar(10) null
 );
 
-create table user
+-- lab16/17
+CREATE TABLE ajp.user
 (
-    username  varchar(50) not null,
-    birthDate varchar(10) not null,
-    emailId   varchar(50) not null,
-    contactNo varchar(20) null
+    id        INT AUTO_INCREMENT,
+    name      VARCHAR(50)  NOT NULL,
+    username  VARCHAR(50)  NOT NULL,
+    password  VARCHAR(40)  NOT NULL,
+    contact   VARCHAR(20),
+    address   VARCHAR(400),
+    birthDate VARCHAR(10),
+    emailId   VARCHAR(50),
+    PRIMARY KEY (id),
+    CONSTRAINT user_pk UNIQUE (username)
 );

@@ -4,15 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Registration</title>
+<title>Login</title>
 </head>
 <body>
-<form action="registration" method="post">
-	<input type="text" name="username">
-	<input type="text" name="name">
-	<input type="password" name="password">
-	<input type="submit" value="Register">	
-</form>
-
+	<p>You have been successfully registered. You can Login Now </p>
+	<form action="login" method="post">
+		<input type="text" name="username">		
+		<input type="password" name="password">
+		<input type="submit" name="btn_submit" value="Login">
+	</form>
 </body>
 </html>
