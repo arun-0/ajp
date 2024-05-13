@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="ajp.struts" extends="struts-default">
+		<action name="listContacts" class="ajp.struts.ListContacts">
+			<result name="ok">listContacts.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="addContact" class="ajp.struts.AddContact">
+			<result name="ok">listContacts</result>
+			<result name="error">error.jsp</result>
+		</action>
+		<action name="deleteContact" class="ajp.struts.DeleteContact">
+			<result name="ok">listContacts</result>
+			<result name="notok">error.jsp</result>
+		</action>
+		<action name="editContact" class="ajp.struts.EditContact">
+			<result name="ok">listContacts</result>
+			<result name="input">editContact.jsp</result>
+			<result name="notok">error.jsp</result>
+		</action>
+	</package>
+</struts>
